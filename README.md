@@ -1,18 +1,8 @@
-## Getting Started
+## Padrão Adapter em Java – Exemplo de Logger
+Este projeto demonstra o uso do padrão Adapter para integrar uma classe de logging antiga (OldLogger) com um novo sistema baseado na interface ILogger.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 📌 Como Funciona?
+A interface ILogger define um método moderno de logging (log).
+A classe OldLogger representa um sistema de logging legado, que usa writeLog.
+A classe LoggerAdapter atua como um adaptador, convertendo chamadas de ILogger.log() para OldLogger.writeLog(), permitindo a reutilização do código antigo.
+A classe App executa o programa e demonstra o uso do adaptador.
